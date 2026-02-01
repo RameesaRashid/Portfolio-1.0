@@ -83,7 +83,7 @@ const ProjectCard = ({ project, index }) => {
             rel="noopener noreferrer"
             className="
               inline-block mt-4 text-xs font-bold uppercase tracking-widest
-              text-blue-400 opacity-0 group-hover:opacity-100
+              text-[#da627d] opacity-0 group-hover:opacity-100
               transition-opacity duration-500
             "
           >

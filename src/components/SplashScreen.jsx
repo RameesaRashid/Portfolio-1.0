@@ -35,7 +35,7 @@ const SplashScreen = ({ finishLoading }) => {
       {/* Progress Bar */}
       <div className="w-48 h-[2px] bg-white/10 mt-6 relative overflow-hidden">
         <motion.div 
-          className="absolute inset-0 bg-blue-500"
+          className="absolute inset-0 bg-[#da627d]"
           initial={{ x: "-100%" }}
           animate={{ x: `${count - 100}%` }}
         />
