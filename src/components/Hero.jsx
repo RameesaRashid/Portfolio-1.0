@@ -76,15 +76,15 @@ const Hero = () => {
       {/* Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-pink-500/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#da627d] font-mono mb-4 tracking-widest uppercase text-sm">
+      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#da627d] font-mono mb-4 tracking-widest uppercase text-xs">
         Available for work
       </motion.p>
       
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-        <h1 className="text-6xl md:text-8xl font-bold text-white tracking-tighter mb-2">
+        <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tighter mb-2">
           I'm <span className="text-[#da627d]">{userInfo.name}</span>
         </h1>
-        <h2 className="text-4xl md:text-6xl font-bold text-zinc-500 italic tracking-tighter mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-zinc-500 italic tracking-tighter mb-8">
           Building Digital Masterpieces.
         </h2>
       </motion.div>
@@ -103,7 +103,7 @@ const Hero = () => {
           onMouseLeave={reset}
           animate={{ x: position.x, y: position.y }}
           transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-          className="px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg hover:bg-zinc-200 transition-colors"
+          className="px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg text-xs hover:bg-zinc-200 transition-colors"
           onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
         >
           View My Work
@@ -115,7 +115,7 @@ const Hero = () => {
           download="Rameesa_Rashid_CV.pdf"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="px-8 py-3 border border-white/20 text-white font-bold rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
+          className="px-8 py-3 border border-white/20 text-xs text-white font-bold rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
         >
           <Download size={18} />
           Download CV

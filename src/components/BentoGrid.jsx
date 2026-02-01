@@ -27,7 +27,7 @@ const ProjectCard = ({ project, index }) => {
     border border-white/10 bg-zinc-900
     flex flex-col justify-end p-8
     transition-all duration-500
-    h-[420px] md:h-[480px] lg:h-[520px]
+    h-[250px] md:h-[280px] lg:h-[420px]
   "
     >
       {/* Background Image */}
@@ -98,7 +98,7 @@ const ProjectCard = ({ project, index }) => {
 const BentoGrid = () => {
   return (
     <div className="bg-black min-h-screen py-20 px-4 md:px-10">
-      <div className="grid grid-cols-1 gap-8 max-w-[1700px] mx-auto">
+      <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

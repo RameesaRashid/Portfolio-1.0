@@ -19,9 +19,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "#" },
-    { name: "Projects", href: "#projects" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Projects", href: "#projects" }, 
+    { name: "About", href: "#about" },      
+    { name: "Contact", href: "#contact" }, 
   ];
 
   return (
@@ -31,20 +31,20 @@ const Navbar = () => {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className="fixed top-0 left-0 right-0 z-[100] flex justify-center p-6"
     >
-      <div className="flex items-center justify-between w-full max-w-2xl px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 backdrop-blur-xl shadow-2xl relative">
+      <div className="flex items-center justify-between w-full max-w-xl px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 backdrop-blur-xl shadow-2xl relative">
         <span className="text-white font-bold md:hidden">RR</span> {/* Initials for mobile */}
         
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+            <a key={link.name} href={link.href} className="text-xs font-medium text-zinc-400 hover:text-white transition-colors">
               {link.name}
             </a>
           ))}
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden md:block px-4 py-1.5 bg-white text-black text-xs font-bold rounded-full hover:bg-zinc-200 transition-colors">
+          <button className="hidden md:block px-4 py-1.5 bg-white text-black text-[9px] font-bold rounded-full hover:bg-zinc-200 transition-colors">
             Let's Talk
           </button>
           

@@ -23,12 +23,12 @@ const Contact = () => {
         viewport={{ once: true }}
         className="relative z-10 text-center px-4"
       >
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tighter leading-tight">
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tighter leading-tight">
           Let's create something <br /> 
           <span className="text-[#da627d]">extraordinary.</span>
         </h2>
         
-        <p className="text-zinc-400 mb-10 max-w-md mx-auto">
+        <p className="text-zinc-400 text-sm mb-10 max-w-md mx-auto">
           Currently seeking new opportunities and creative collaborations. 
           Drop me a line or copy my email address.
         </p>
@@ -39,7 +39,7 @@ const Contact = () => {
             href={`mailto:${email}`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-3 px-10 py-4 bg-white text-black font-bold rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-white/50 transition-all cursor-pointer"
+            className="flex items-center text-xs gap-3 px-8 py-3 bg-white text-black font-bold rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-white/50 transition-all cursor-pointer"
           >
             <Mail size={20} />
             Get In Touch
@@ -48,7 +48,7 @@ const Contact = () => {
           {/* Secondary Action: Click to Copy */}
           <button 
             onClick={handleCopy}
-            className="group flex items-center gap-2 text-zinc-500 hover:text-white transition-colors text-sm font-mono mt-2"
+            className="group flex items-center gap-2 text-zinc-500 hover:text-white transition-colors text-xs font-mono mt-2"
           >
             <AnimatePresence mode="wait">
               {copied ? (
@@ -79,7 +79,7 @@ const Contact = () => {
         </div>
       </motion.div> 
 
-      <div className="mt-24 text-zinc-600 text-sm font-mono">
+      <div className="mt-24 text-gray-500 text-[8px] font-mono">
         © 2026 — Designed & Developed by Rameesa Rashid
       </div>
     </section>

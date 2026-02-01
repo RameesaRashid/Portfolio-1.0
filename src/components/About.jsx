@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <section id="about" className="py-24 px-6 md:px-10 bg-black text-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* 1. Main Bio Card (Takes up 2 columns) */}
         <motion.div 
@@ -19,10 +19,10 @@ const About = () => {
           <span className="text-[#da627d] font-mono tracking-widest uppercase text-xs mb-4">
             Introduction
           </span>
-          <h2 className="text-4xl font-bold mb-6 text-white">
+          <h2 className="text-2xl font-bold mb-6 text-white">
             Architecting <span className="text-zinc-500 italic">Digital Experiences.</span>
           </h2>
-          <p className="text-gray-400 leading-relaxed text-lg">
+          <p className="text-gray-400 leading-relaxed text-sm">
             I am a <span className="text-white font-medium">Creative Developer</span> at the intersection of logic and art. 
             I don’t just build websites; I architect digital experiences that respond to the human touch. 
             By blending rigorous technical architecture with a deep obsession for 
@@ -37,7 +37,7 @@ const About = () => {
           viewport={{ once: true }}
           className="p-10 bg-zinc-900/40 rounded-[2.5rem] border border-white/10 backdrop-blur-md flex flex-col"
         >
-          <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+          <h2 className="text-lg font-bold mb-6 flex items-center gap-2">
             <span className="w-2 h-2 bg-[#da627d] rounded-full animate-pulse" />
             Tech Stack
           </h2>
@@ -46,7 +46,7 @@ const About = () => {
               <motion.span 
                 key={skill} 
                 whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.1)" }}
-                className="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-zinc-300"
+                className="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-[10px] font-medium text-zinc-300"
               >
                 {skill}
               </motion.span>
@@ -68,8 +68,8 @@ const About = () => {
           className="p-8 bg-blue-300/10 rounded-[2.5rem] border border-pink-500/20 flex items-center justify-between"
         >
           <div>
-            <p className="text-[#da627d] text-sm font-mono">Current Location</p>
-            <p className="text-white font-bold">Remote / Global</p>
+            <p className="text-[#da627d] text-xs font-mono">Current Location</p>
+            <p className="text-white font-bold text-[16px]">Remote / Global</p>
           </div>
         </motion.div>
 
