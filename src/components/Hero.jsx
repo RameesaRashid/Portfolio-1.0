@@ -7,7 +7,7 @@ const userInfo = {
   email: "your.email@example.com",
   github: "https://github.com/RameesaRashid",
   githubUser: "RameesaRashid",
-  linkedin: "https://linkedin.com/in/your-profile",
+  linkedin: "https://www.linkedin.com/in/rameesa-rashid-7b303832a/",
   linkedinUser: "Connect on LinkedIn",
   cvUrl: "/resume.pdf" 
 };
