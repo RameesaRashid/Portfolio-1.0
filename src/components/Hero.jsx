@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, Check } from "lucide-react";
+import { Github, Linkedin, Mail, Check, Download } from "lucide-react"; 
 
 const userInfo = {
   name: "Rameesa Rashid", 
@@ -9,6 +9,7 @@ const userInfo = {
   githubUser: "RameesaRashid",
   linkedin: "https://linkedin.com/in/your-profile",
   linkedinUser: "Connect on LinkedIn",
+  cvUrl: "/resume.pdf" 
 };
 
 const SocialLink = ({ href, icon: Icon, label, isCopy = false }) => {
@@ -62,16 +63,17 @@ const Hero = () => {
 
   const handleMouse = (e) => {
     const { clientX, clientY } = e;
-    const { middleX, middleY, width, height } = buttonRef.current.getBoundingClientRect();
-    const x = clientX - (buttonRef.current.getBoundingClientRect().left + width / 2);
-    const y = clientY - (buttonRef.current.getBoundingClientRect().top + height / 2);
-    setPosition({ x: x * 0.3, y: y * 0.3 }); // 0.3 is the pull strength
+    const rect = buttonRef.current.getBoundingClientRect();
+    const x = clientX - (rect.left + rect.width / 2);
+    const y = clientY - (rect.top + rect.height / 2);
+    setPosition({ x: x * 0.3, y: y * 0.3 });
   };
 
   const reset = () => setPosition({ x: 0, y: 0 });
 
   return (
     <section className="h-screen flex flex-col justify-center items-center bg-black text-center px-4 relative overflow-hidden">
+      {/* Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-pink-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#da627d] font-mono mb-4 tracking-widest uppercase text-sm">
@@ -93,17 +95,32 @@ const Hero = () => {
         <SocialLink icon={Mail} label="Copy Email" isCopy={true} />
       </div>
 
-      <motion.button 
-        ref={buttonRef}
-        onMouseMove={handleMouse}
-        onMouseLeave={reset}
-        animate={{ x: position.x, y: position.y }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-        className="px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg"
-        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-      >
-        View My Work
-      </motion.button>
+      <div className="flex flex-col sm:flex-row gap-4">
+        {/* Main CTA Button */}
+        <motion.button 
+          ref={buttonRef}
+          onMouseMove={handleMouse}
+          onMouseLeave={reset}
+          animate={{ x: position.x, y: position.y }}
+          transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+          className="px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg hover:bg-zinc-200 transition-colors"
+          onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          View My Work
+        </motion.button>
+
+        {/* Download CV Button */}
+        <motion.a
+          href={userInfo.cvUrl}
+          download="Rameesa_Rashid_CV.pdf"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-8 py-3 border border-white/20 text-white font-bold rounded-full flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
+        >
+          <Download size={18} />
+          Download CV
+        </motion.a>
+      </div>
     </section>
   );
 };

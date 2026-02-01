@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const skills = ["React", "JavaScript", "Tailwind CSS", "Framer Motion", "Node.js", "Vite", "Git", "UI/UX"];
+const skills = ["React", "JavaScript","TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Vite", "Git", "UI/UX"];
 
 const SkillsMarquee = () => {
   return (

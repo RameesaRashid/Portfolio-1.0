@@ -9,6 +9,7 @@ import SkillsMarquee from "./components/SkillsMarquee";
 import Contact from "./components/Contact";
 import SplashScreen from "./components/SplashScreen"; // Import Splash
 import ScrollProgress from "./components/ScrollProgress";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
                 <About />
               </div>
               <Contact />
+              <BackToTop />
             </motion.div>
           </>
         )}
