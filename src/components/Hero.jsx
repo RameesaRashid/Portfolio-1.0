@@ -76,7 +76,7 @@ const Hero = () => {
       {/* Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-pink-500/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#da627d] font-mono mb-4 tracking-widest uppercase text-xs">
+      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-[#da627d] font-mono mb-4 tracking-widest uppercase text-[9px]">
         Available for work
       </motion.p>
       
