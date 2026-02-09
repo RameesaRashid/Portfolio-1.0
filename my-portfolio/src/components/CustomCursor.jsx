@@ -4,7 +4,7 @@ import { motion, useSpring } from "framer-motion";
 const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
   
-  // Spring settings make the movement feel "fluid" and "bouncy" instead of robotic
+  
   const cursorX = useSpring(0, { stiffness: 500, damping: 28 });
   const cursorY = useSpring(0, { stiffness: 500, damping: 28 });
 

@@ -10,7 +10,7 @@ const SkillsMarquee = () => {
         transition={{ ease: "linear", duration: 20, repeat: Infinity }}
         className="flex whitespace-nowrap"
       >
-        {/* We duplicate the list to create a seamless loop */}
+        {/* duplicate the list to create a seamless loop */}
         {[...skills, ...skills].map((skill, index) => (
           <span key={index} className="mx-8 text-3xl md:text-4xl font-bold text-zinc-800 uppercase tracking-tighter hover:text-white transition-colors cursor-default">
             {skill}

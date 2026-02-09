@@ -8,7 +8,7 @@ const About = () => {
     <section id="about" className="py-24 px-6 md:px-10 bg-black text-white">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        {/* 1. Main Bio Card (Takes up 2 columns) */}
+        {/* Main Bio Card */}
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -30,7 +30,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        {/* 2. Tech Stack Card */}
+        {/* Tech Stack Card */}
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -60,7 +60,7 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* 3. Small Info Card (Bonus) */}
+        {/* Small Info Card (Bonus) */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -9,12 +9,12 @@ const SplashScreen = ({ finishLoading }) => {
       setCount((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setTimeout(finishLoading, 500); // Small delay before transition
+          setTimeout(finishLoading, 500); // Small delay
           return 100;
         }
         return prev + 1;
       });
-    }, 20); // Adjust speed here
+    }, 20);
 
     return () => clearInterval(interval);
   }, [finishLoading]);
@@ -22,7 +22,7 @@ const SplashScreen = ({ finishLoading }) => {
   return (
     <motion.div
       initial={{ opacity: 1 }}
-      exit={{ y: "-100vh" }} // Screen slides up like a curtain
+      exit={{ y: "-100vh" }}
       transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black text-white"
     >

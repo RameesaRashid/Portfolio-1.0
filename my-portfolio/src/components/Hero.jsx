@@ -96,7 +96,7 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
-        {/* Main CTA Button */}
+        {/* Main CTA */}
         <motion.button 
           ref={buttonRef}
           onMouseMove={handleMouse}
@@ -109,7 +109,7 @@ const Hero = () => {
           View My Work
         </motion.button>
 
-        {/* Download CV Button */}
+        {/* Download CV */}
         <motion.a
           href={userInfo.cvUrl}
           download="Rameesa_Rashid_CV.pdf"

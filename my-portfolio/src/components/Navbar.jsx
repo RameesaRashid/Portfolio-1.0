@@ -11,7 +11,7 @@ const Navbar = () => {
     const previous = scrollY.getPrevious();
     if (latest > previous && latest > 150) {
       setHidden(true);
-      setMobileMenuOpen(false); // Close menu on scroll
+      setMobileMenuOpen(false);
     } else {
       setHidden(false);
     }
@@ -32,7 +32,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-[100] flex justify-center p-6"
     >
       <div className="flex items-center justify-between w-full max-w-xl px-6 py-3 rounded-full bg-zinc-900/80 border border-white/10 backdrop-blur-xl shadow-2xl relative">
-        <span className="text-white font-bold md:hidden">RR</span> {/* Initials for mobile */}
+        <span className="text-white font-bold md:hidden">RR</span>
         
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">

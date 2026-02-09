@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 const ScrollProgress = () => {
   const { scrollYProgress } = useScroll();
   
-  // useSpring makes the bar "bounce" or "smooth out" rather than being jittery
+  
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
