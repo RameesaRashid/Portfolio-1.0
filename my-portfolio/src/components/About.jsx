@@ -80,7 +80,7 @@ const About = () => {
           className="md:col-span-2 p-8 bg-zinc-900/40 rounded-[2.5rem] border border-white/10 flex items-center gap-6"
         >
            <p className="text-zinc-400 text-sm uppercase tracking-[0.2em]">
-             Focusing on <span className="text-white font-bold mx-2">Scalable MERN Apps</span> & <span className="text-white font-bold ml-2">Interaction Design</span>
+             Focusing on <span className="text-white font-bold mx-2">Scalable MERN Apps</span> & <span className="text-white font-bold ml-2">Interaction Design.</span>
            </p>
         </motion.div>
 
